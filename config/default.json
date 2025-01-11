@@ -1,0 +1,14 @@
+{
+    "port" : 3002,
+    "db_host": "localhost",
+    "db_username": "postgres",
+    "db_port": 5432,
+    "db_password" : "parol",
+    "db_name" : "freelance",
+    "jwtKey": "qwerty",
+    "jwtTime": 86400000,
+    "access_key": "AccessTokenSecretKeyUltraProMax",
+    "refresh_key": "RefreshTokenSecretKeyNoteUltraHdLite",
+    "access_time": "15h",
+    "refresh_time": "15d"
+}
