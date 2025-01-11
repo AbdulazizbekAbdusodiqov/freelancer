@@ -12,7 +12,7 @@ module.exports = {
       portfolio_url: Joi.string().uri().required().trim(),
       availability: Joi.boolean().strict().default(false),
       rating: Joi.number().min(0).max(5),
-      password: Joi.string().min(8).required(),
+      password: Joi.string().min(5).required(),
       is_active: Joi.boolean().strict().default(false),
       refresh_token: Joi.string(),
     });

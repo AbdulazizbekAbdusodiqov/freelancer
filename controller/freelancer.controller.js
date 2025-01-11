@@ -1,7 +1,8 @@
 const Freelancer = require("../models/Freelancer")
 const errorHandler = require("../helpers/errorHandler")
 const {freelancerValidation} = require("../validations/freelancer.validation")
-
+const bcrypt = require("bcrypt")
+const jwt = require("../service/jwt.service")
 
 const createFreelancer = async (req, res) => {
     try {
@@ -20,10 +21,23 @@ const createFreelancer = async (req, res) => {
             errorHandler(error, res)
         }
 
-        const newFreelancer =  Freelancer.build(value)
+        const hashedPassword = bcrypt.hashSync(value.password, 7)
+        const newFreelancer =  Freelancer.build({...value, password : hashedPassword})
+
+        const payload = {
+            id: newFreelancer.id,
+            name : newFreelancer.name,
+            email : newFreelancer.email,
+            role : "freelancer"
+        }
+
+        const token = jwt.generateTokens(payload)
+        
+        newFreelancer.refresh_token = token.refreshToken
 
         console.log(newFreelancer);
         
+        await newFreelancer.save()
 
         return res.send(newFreelancer)
 
