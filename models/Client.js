@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 
-const Freelancer = sequelize.define("freelancer", {
+const Client = sequelize.define("client", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -23,19 +23,6 @@ const Freelancer = sequelize.define("freelancer", {
     bio: {
         type: DataTypes.STRING(500)
     },
-    hourly_rate: {
-        type: DataTypes.DECIMAL(15, 2)
-    },
-    portfolio_url: {
-        type: DataTypes.STRING
-    },
-    availability: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    rating: {
-        type: DataTypes.DECIMAL,
-    },
     password: {
         type: DataTypes.STRING,
     },
@@ -54,4 +41,4 @@ const Freelancer = sequelize.define("freelancer", {
 });
 
 
-module.exports = Freelancer
+module.exports = Client

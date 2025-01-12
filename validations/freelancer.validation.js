@@ -13,8 +13,8 @@ module.exports = {
       availability: Joi.boolean().strict().default(false),
       rating: Joi.number().min(0).max(5),
       password: Joi.string().min(5).required(),
+      verification: Joi.string().required(),
       is_active: Joi.boolean().strict().default(false),
-      refresh_token: Joi.string(),
     });
 
     return freelancerSchema.validate(data, { abortEarly: false });
