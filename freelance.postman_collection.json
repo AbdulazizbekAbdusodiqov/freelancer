@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"John\",\n  \"surname\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"+123456789\",\n  \"bio\": \"Experienced software developer.\",\n  \"hourly_rate\": 50,\n  \"portfolio_url\": \"http://example.com/portfolio\",\n  \"availability\": true,\n  \"rating\": 4.5,\n  \"verification\" : \"shgd<fihjifvghbifghdsgl\",\n  \"password\": \"parol\",\n  \"is_active\": false\n}\n",
+							"raw": "{\n  \"name\": \"Abdulaziz\",\n  \"surname\": \"Abdusodiqov\",\n  \"email\": \"abdulazizbekabdusodiqov@gmail.com\",\n  \"phone\": \"+123456789\",\n  \"bio\": \"Experienced software developer.\",\n  \"hourly_rate\": 50,\n  \"portfolio_url\": \"http://example.com/portfolio\",\n  \"availability\": true,\n  \"rating\": 4.5,\n  \"verification\" : \"shgd<fihjifvghbifghdsgl\",\n  \"password\": \"parol\",\n  \"is_active\": false\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -118,7 +118,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3002/api/freelancer/1",
+							"raw": "http://localhost:3002/api/freelancer/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -127,7 +127,41 @@
 							"path": [
 								"api",
 								"freelancer",
-								"1"
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "active link",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/freelancer/activate/f606b16c-efac-4370-9197-89ec5920a22f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"freelancer",
+								"activate",
+								"f606b16c-efac-4370-9197-89ec5920a22f"
 							]
 						}
 					},

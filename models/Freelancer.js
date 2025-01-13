@@ -46,6 +46,9 @@ const Freelancer = sequelize.define("freelancer", {
     verification: {
         type: DataTypes.STRING,
     },
+    activation_link: {
+        type: DataTypes.STRING,
+    },
     refresh_token: {
         type: DataTypes.STRING,
     }

@@ -10,5 +10,11 @@
     "access_key": "AccessTokenSecretKeyUltraProMax",
     "refresh_key": "RefreshTokenSecretKeyNoteUltraHdLite",
     "access_time": "15h",
-    "refresh_time": "15d"
+    "refresh_time": "15d",
+    "refresh_token_ms" : 1296000000,
+    "smtp_password" : "nxonzgxwjvdkjpxh",
+    "smtp_user" : "abdulazizbekabdusodiqov@gmail.com",
+    "smtp_host" : "smtp.gmail.com",
+    "smtp_port" : 587,
+    "api_url" : "http://localhost:3002"
 }
