@@ -39,7 +39,7 @@ const createClient = async (req, res) => {
 
         await newClient.save()
 
-        return res.send(newClient)
+        return res.send({newClient, accessToken : token.accessToken})
 
     } catch (error) {
         errorHandler(error, res)

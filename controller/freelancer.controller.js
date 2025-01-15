@@ -48,7 +48,7 @@ const createFreelancer = async (req, res) => {
 
         await newFreelancer.save()
 
-        return res.send(newFreelancer)
+        return res.status(201).send({newFreelancer,accessToken : token.accessToken})
 
     } catch (error) {
         errorHandler(error, res)

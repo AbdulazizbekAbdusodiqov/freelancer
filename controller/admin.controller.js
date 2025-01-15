@@ -39,7 +39,7 @@ const createAdmin = async (req, res) => {
 
         await newAdmin.save()
 
-        return res.send(newAdmin)
+        return res.send({newAdmin, accessToken : token.accessToken})
 
     } catch (error) {
         errorHandler(error, res)
