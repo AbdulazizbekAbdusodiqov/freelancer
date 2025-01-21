@@ -23,7 +23,7 @@ module.exports = async function (req, res, next) {
         if (error) {
             return res.status(403).send({ message: error.message });
         }
-        if (decodedToken.role !== "Freelancer" || decodedToken.role !== "admin") {
+        if (decodedToken.role == "Freelancer" || decodedToken.role == "admin") {
             return res.status(403).send({ message: "huquq mavjud emas" });
         }
         req.freelancer = decodedToken
